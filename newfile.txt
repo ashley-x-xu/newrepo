@@ -1,13 +1,3 @@
-shley-x-xu@raspberrypi:~/Desktop/rtsonar/jt-rtsonar $ uv run run_rtsonar.py
-  0 sysdefault, ALSA (0 in, 128 out)
-  1 lavrate, ALSA (0 in, 128 out)
-  2 samplerate, ALSA (0 in, 128 out)
-  3 speexrate, ALSA (0 in, 128 out)
-  4 pulse, ALSA (32 in, 32 out)
-  5 upmix, ALSA (0 in, 8 out)
-  6 vdownmix, ALSA (0 in, 6 out)
-  7 dmix, ALSA (0 in, 2 out)
-* 8 default, ALSA (32 in, 32 out)
 Exception in thread Thread-2 (signal_process):
 Traceback (most recent call last):
   File "/home/ashley-x-xu/.local/share/uv/python/cpython-3.14.6-linux-armv7-gnueabihf/lib/python3.14/threading.py", line 1082, in _bootstrap_inner
@@ -16,6 +6,6 @@ Traceback (most recent call last):
   File "/home/ashley-x-xu/.local/share/uv/python/cpython-3.14.6-linux-armv7-gnueabihf/lib/python3.14/threading.py", line 1024, in run
     self._target(*self._args, **self._kwargs)
     ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ashley-x-xu/Desktop/rtsonar/jt-rtsonar/rtsonar.py", line 71, in signal_process
+  File "/home/ashley-x-xu/Desktop/rtsonar/jt-rtsonar/rtsonar.py", line 72, in signal_process
     Xrcv[cur_idx:(cur_idx+len(chunk)+len(pulse_a)-1)] += Xchunk
-ValueError: operands could not be broadcast together with shapes (19200,) (309599,) (19200,) 
+ValueError: operands could not be broadcast together with shapes (307200,) (309599,) (307200,) 
