@@ -1,1 +1,89 @@
-hi
+Failed to build `scipy==1.17.1`
+  ├─▶ The build backend returned an error
+  ╰─▶ Call to `mesonpy.build_wheel` failed (exit status: 1)
+
+      [stdout]
+      + meson setup
+      /home/ashley-x-xu/.cache/uv/sdists-v9/pypi/scipy/1.17.1/L08VjLOgqTMsQckk/src
+      /home/ashley-x-xu/.cache/uv/sdists-v9/pypi/scipy/1.17.1/L08VjLOgqTMsQckk/src/.mesonpy-5q4xxtfs
+      -Dbuildtype=release -Db_ndebug=if-release -Db_vscrt=md
+      --native-file=/home/ashley-x-xu/.cache/uv/sdists-v9/pypi/scipy/1.17.1/L08VjLOgqTMsQckk/src/.mesonpy-5q4xxtfs/meson-python-native-file.ini
+      The Meson build system
+      Version: 1.11.1
+      Source dir:
+      /home/ashley-x-xu/.cache/uv/sdists-v9/pypi/scipy/1.17.1/L08VjLOgqTMsQckk/src
+      Build dir:
+      /home/ashley-x-xu/.cache/uv/sdists-v9/pypi/scipy/1.17.1/L08VjLOgqTMsQckk/src/.mesonpy-5q4xxtfs
+      Build type: native build
+      Project name: scipy
+      Project version: 1.17.1
+      C compiler for the host machine: cc (gcc 10.2.1 "cc (Raspbian
+      10.2.1-6+rpi1) 10.2.1 20210110")
+      C linker for the host machine: cc ld.bfd 2.35.2
+      C++ compiler for the host machine: c++ (gcc 10.2.1 "c++ (Raspbian
+      10.2.1-6+rpi1) 10.2.1 20210110")
+      C++ linker for the host machine: c++ ld.bfd 2.35.2
+      Cython compiler for the host machine: cython (cython 3.2.5)
+      Host machine cpu family: arm
+      Host machine cpu: arm
+      Program python found: YES
+      (/home/ashley-x-xu/.cache/uv/builds-v0/.tmpW85UeQ/bin/python)
+      Found pkg-config: YES (/usr/bin/pkg-config) 0.29.2
+      Run-time dependency python found: YES 3.14
+      Program cython found: YES
+      (/home/ashley-x-xu/.cache/uv/builds-v0/.tmpW85UeQ/bin/cython)
+      Compiler for C supports arguments -Wno-unused-but-set-variable: YES
+      Compiler for C supports arguments -Wno-unused-function: YES
+      Compiler for C supports arguments -Wno-conversion: YES
+      Compiler for C supports arguments -Wno-misleading-indentation: YES
+      Library m found: YES
+
+      ../meson.build:88:0: ERROR: Unknown compiler(s): [['gfortran'],
+      ['flang-new'], ['flang'], ['nvfortran'], ['pgfortran'], ['ifort'],
+      ['ifx'], ['g95']]
+      The following exception(s) were encountered:
+      Running `gfortran --help` gave "[Errno 2] No such file or directory:
+      'gfortran'"
+      Running `gfortran --version` gave "[Errno 2] No such file or directory:
+      'gfortran'"
+      Running `gfortran -V` gave "[Errno 2] No such file or directory:
+      'gfortran'"
+      Running `flang-new --help` gave "[Errno 2] No such file or directory:
+      'flang-new'"
+      Running `flang-new --version` gave "[Errno 2] No such file or directory:
+      'flang-new'"
+      Running `flang-new -V` gave "[Errno 2] No such file or directory:
+      'flang-new'"
+      Running `flang --help` gave "[Errno 2] No such file or directory:
+      'flang'"
+      Running `flang --version` gave "[Errno 2] No such file or directory:
+      'flang'"
+      Running `flang -V` gave "[Errno 2] No such file or directory: 'flang'"
+      Running `nvfortran --help` gave "[Errno 2] No such file or directory:
+      'nvfortran'"
+      Running `nvfortran --version` gave "[Errno 2] No such file or directory:
+      'nvfortran'"
+      Running `nvfortran -V` gave "[Errno 2] No such file or directory:
+      'nvfortran'"
+      Running `pgfortran --help` gave "[Errno 2] No such file or directory:
+      'pgfortran'"
+      Running `pgfortran --version` gave "[Errno 2] No such file or directory:
+      'pgfortran'"
+      Running `pgfortran -V` gave "[Errno 2] No such file or directory:
+      'pgfortran'"
+      Running `ifort --help` gave "[Errno 2] No such file or directory:
+      'ifort'"
+      Running `ifort --version` gave "[Errno 2] No such file or directory:
+      'ifort'"
+      Running `ifort -V` gave "[Errno 2] No such file or directory: 'ifort'"
+      Running `ifx --help` gave "[Errno 2] No such file or directory: 'ifx'"
+      Running `ifx --version` gave "[Errno 2] No such file or directory:
+      'ifx'"
+      Running `ifx -V` gave "[Errno 2] No such file or directory: 'ifx'"
+      Running `g95 --help` gave "[Errno 2] No such file or directory: 'g95'"
+      Running `g95 --version` gave "[Errno 2] No such file or directory:
+      'g95'"
+      Running `g95 -V` gave "[Errno 2] No such file or directory: 'g95'"
+
+      A full log can be found at
+      /home/ashley-x-xu/.cache/uv/sdists-v9/pypi/scipy/1.17.1/L08VjLOgqTMsQckk/src/.mesonpy-5q4xxtfs/meson-logs/meson-log.txt
