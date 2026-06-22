@@ -1,11 +1,10 @@
-Exception in thread Thread-2 (signal_process):
+ashley-x-xu@raspberrypi:~/Desktop/sonar $ uv run run_sonar.py
 Traceback (most recent call last):
-  File "/home/ashley-x-xu/.local/share/uv/python/cpython-3.14.6-linux-armv7-gnueabihf/lib/python3.14/threading.py", line 1082, in _bootstrap_inner
-    self._context.run(self.run)
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/ashley-x-xu/.local/share/uv/python/cpython-3.14.6-linux-armv7-gnueabihf/lib/python3.14/threading.py", line 1024, in run
-    self._target(*self._args, **self._kwargs)
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ashley-x-xu/Desktop/rtsonar/jt-rtsonar/rtsonar.py", line 72, in signal_process
-    Xrcv[cur_idx:(cur_idx+len(chunk)+len(pulse_a)-1)] += Xchunk
-ValueError: operands could not be broadcast together with shapes (307200,) (309599,) (307200,) 
+  File "/home/ashley-x-xu/Desktop/sonar/run_sonar.py", line 1, in <module>
+    import numpy as np, matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'numpy'
+ashley-x-xu@raspberrypi:~/Desktop/sonar $ python3 -m pip install numpy
+Defaulting to user installation because normal site-packages is not writeable
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Requirement already satisfied: numpy in /home/ashley-x-xu/.local/lib/python3.9/site-packages (2.0.2)
+WARNING: Error parsing dependencies of pyzmq: Undefined <Op('===')> on 'cpython' and 'pypy'.
