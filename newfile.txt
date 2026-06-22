@@ -1,10 +1,17 @@
-ashley-x-xu@raspberrypi:~/Desktop/sonar $ uv run run_sonar.py
-Traceback (most recent call last):
-  File "/home/ashley-x-xu/Desktop/sonar/run_sonar.py", line 1, in <module>
-    import numpy as np, matplotlib.pyplot as plt
-ModuleNotFoundError: No module named 'numpy'
-ashley-x-xu@raspberrypi:~/Desktop/sonar $ python3 -m pip install numpy
-Defaulting to user installation because normal site-packages is not writeable
-Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
-Requirement already satisfied: numpy in /home/ashley-x-xu/.local/lib/python3.9/site-packages (2.0.2)
-WARNING: Error parsing dependencies of pyzmq: Undefined <Op('===')> on 'cpython' and 'pypy'.
+pactl load-module module-alsa-source device=plughw:3,0 source_name=usbmic
+pactl load-module module-alsa-source device=hw:3,0 source_name=usbmic
+pactl load-module module-alsa-source device=hw:3,0 source_name=usbmic format=s161e rate=480
+
+pactl load-module module-alsa-source device=hw:4,0 source_name=usbmic
+pactl list short sources
+uv run test_sound.py
+pactl load-module module-alsa-sink device=hw:3,0 sink_name=usbspk
+pactl list short sources
+pactl list short sinks
+pactl set-default-source usbmic
+pactl set-default-sink usbspk
+
+starts of a script:
+SPK_NUM=$(aplay -l | grep "USB  AUDIO" | sed 's/.*card \([0-9]\+\).*/\1/')
+pactl load-module module-alsa-sink device=hw:$SPK_NUM,0 sink_name=usbspk
+
