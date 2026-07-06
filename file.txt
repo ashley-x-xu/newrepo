@@ -1,0 +1,48 @@
+pcm.!default {
+        type plug
+        slave.pcm "asym_device"
+}
+
+pcm.asym_device {
+        type asym
+        playback.pcm "headphones_plug"
+        capture.pcm "usbmic_plug"
+}
+
+pcm.headphones_plug {
+        type plug
+        slave.pcm "headphones"
+}
+
+pcm.usbmic_plug {
+        type plug
+        slave.pcm "usbmic"
+}
+
+pcm.usbspk_plug {
+        type plug
+        slave.pcm "usbspk"
+}
+
+pcm.headphones {
+        type bluealsa
+        device "8D:D8:86:71:B6:06"
+        profile "a2dp"
+}
+
+pcm.usbmic {
+        type hw
+        card 3
+        device 0
+}
+
+pcm.usbspk {
+        type hw
+        card 4
+        device 0
+}
+
+ctl.!default {
+        type hw
+        card 0
+}
