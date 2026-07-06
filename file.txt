@@ -1,48 +1,14 @@
-pcm.!default {
-        type plug
-        slave.pcm "asym_device"
-}
-
-pcm.asym_device {
-        type asym
-        playback.pcm "headphones_plug"
-        capture.pcm "usbmic_plug"
-}
-
-pcm.headphones_plug {
-        type plug
-        slave.pcm "headphones"
-}
-
-pcm.usbmic_plug {
-        type plug
-        slave.pcm "usbmic"
-}
-
-pcm.usbspk_plug {
-        type plug
-        slave.pcm "usbspk"
-}
-
-pcm.headphones {
-        type bluealsa
-        device "8D:D8:86:71:B6:06"
-        profile "a2dp"
-}
-
-pcm.usbmic {
-        type hw
-        card 3
-        device 0
-}
-
-pcm.usbspk {
-        type hw
-        card 4
-        device 0
-}
-
-ctl.!default {
-        type hw
-        card 0
-}
+gpx stream open -> /dev/ttyACM0
+[1] Moving to (12.0, 17.0) ...
+    traveling 2.42s ...
+gpx stream closed.
+Traceback (most recent call last):
+  File "/home/ashley-x-xu/Desktop/rtsonar/jt-rtsonar/ScannerMovement/2D_startercode.py", line 244, in <module>
+    main()
+  File "/home/ashley-x-xu/Desktop/rtsonar/jt-rtsonar/ScannerMovement/2D_startercode.py", line 227, in main
+    distance = get_misc_measurements()
+  File "/home/ashley-x-xu/Desktop/rtsonar/jt-rtsonar/ScannerMovement/2D_startercode.py", line 162, in get_misc_measurements
+    dist = measure_distance_cm()
+  File "/home/ashley-x-xu/Desktop/rtsonar/jt-rtsonar/ScannerMovement/sonar.py", line 112, in measure_distance_cm
+    in_dev = out_dev = int(default_dev)
+TypeError: int() argument must be a string, a bytes-like object or a number, not '_InputOutputPair'
