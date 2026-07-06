@@ -1,14 +1,24 @@
-gpx stream open -> /dev/ttyACM0
-[1] Moving to (12.0, 17.0) ...
-    traveling 2.42s ...
-gpx stream closed.
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.0.2 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/home/ashley-x-xu/Desktop/rtsonar/jt-rtsonar/ScannerMovement/plot_measurements.py", line 17, in <module>
+    import matplotlib
+  File "/usr/lib/python3/dist-packages/matplotlib/__init__.py", line 174, in <module>
+    _check_versions()
+  File "/usr/lib/python3/dist-packages/matplotlib/__init__.py", line 159, in _check_versions
+    from . import ft2font
+AttributeError: _ARRAY_API not found
 Traceback (most recent call last):
-  File "/home/ashley-x-xu/Desktop/rtsonar/jt-rtsonar/ScannerMovement/2D_startercode.py", line 244, in <module>
-    main()
-  File "/home/ashley-x-xu/Desktop/rtsonar/jt-rtsonar/ScannerMovement/2D_startercode.py", line 227, in main
-    distance = get_misc_measurements()
-  File "/home/ashley-x-xu/Desktop/rtsonar/jt-rtsonar/ScannerMovement/2D_startercode.py", line 162, in get_misc_measurements
-    dist = measure_distance_cm()
-  File "/home/ashley-x-xu/Desktop/rtsonar/jt-rtsonar/ScannerMovement/sonar.py", line 112, in measure_distance_cm
-    in_dev = out_dev = int(default_dev)
-TypeError: int() argument must be a string, a bytes-like object or a number, not '_InputOutputPair'
+  File "/home/ashley-x-xu/Desktop/rtsonar/jt-rtsonar/ScannerMovement/plot_measurements.py", line 17, in <module>
+    import matplotlib
+  File "/usr/lib/python3/dist-packages/matplotlib/__init__.py", line 174, in <module>
+    _check_versions()
+  File "/usr/lib/python3/dist-packages/matplotlib/__init__.py", line 159, in _check_versions
+    from . import ft2font
+ImportError: numpy.core.multiarray failed to import
