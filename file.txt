@@ -1,10 +1,11 @@
-/home/ashley-x-xu/.local/lib/python3.9/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
-  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
-Traceback (most recent call last):
-  File "/home/ashley-x-xu/Desktop/rtsonar/jt-rtsonar/ScannerMovement/plot_measurements.py", line 20, in <module>
-    from mpl_toolkits.mplot3d import Axes3D  # noqa: F401
-  File "/usr/lib/python3/dist-packages/mpl_toolkits/mplot3d/__init__.py", line 1, in <module>
-    from .axes3d import Axes3D
-  File "/usr/lib/python3/dist-packages/mpl_toolkits/mplot3d/axes3d.py", line 25, in <module>
-    import matplotlib.docstring as docstring
-ModuleNotFoundError: No module named 'matplotlib.docstring'
+ 0 sysdefault, ALSA (0 in, 128 out)
+   1 lavrate, ALSA (0 in, 128 out)
+   2 samplerate, ALSA (0 in, 128 out)
+   3 speexrate, ALSA (0 in, 128 out)
+   4 pulse, ALSA (32 in, 32 out)
+   5 upmix, ALSA (0 in, 8 out)
+   6 vdownmix, ALSA (0 in, 6 out)
+   7 asym_device, ALSA (128 in, 0 out)
+   8 usbmic_plug, ALSA (128 in, 0 out)
+   9 dmix, ALSA (0 in, 2 out)
+* 10 default, ALSA (32 in, 32 out)
