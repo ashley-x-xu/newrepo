@@ -1,11 +1,57 @@
- 0 sysdefault, ALSA (0 in, 128 out)
-   1 lavrate, ALSA (0 in, 128 out)
-   2 samplerate, ALSA (0 in, 128 out)
-   3 speexrate, ALSA (0 in, 128 out)
-   4 pulse, ALSA (32 in, 32 out)
-   5 upmix, ALSA (0 in, 8 out)
-   6 vdownmix, ALSA (0 in, 6 out)
-   7 asym_device, ALSA (128 in, 0 out)
-   8 usbmic_plug, ALSA (128 in, 0 out)
-   9 dmix, ALSA (0 in, 2 out)
-* 10 default, ALSA (32 in, 32 out)
+pcm.!default {
+        type plug
+        slave.pcm "asym_device"
+}
+
+pcm.asym_device {
+        type asym
+        playback.pcm "bltspk_plug"
+        capture.pcm "usbmic_plug"
+}
+
+pcm.headphones_plug {
+        type plug
+        slave.pcm "headphones"
+}
+
+pcm.usbmic_plug {
+        type plug
+        slave.pcm "usbmic"
+}
+
+pcm.usbspk_plug {
+        type plug
+        slave.pcm "usbspk"
+}
+
+pcm.bltspk_plug {
+        type plug
+        slave.pcm "bltspk"
+}
+
+pcm.headphones {
+        type bluealsa
+        device "8D:D8:86:71:B6:06"
+        profile "a2dp"
+}
+
+pcm.usbmic {
+        type hw
+        card 3
+        device 0
+}
+
+pcm.usbspk {
+        type hw
+        card 4
+        device 0
+}
+
+pcm.btlspk {
+        type bluealsa
+        device "41:42:60:42:56:49"
+        profile "a2dp"
+}
+
+ctl.!default {
+        type hw
