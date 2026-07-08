@@ -1,16 +1,50 @@
-pactl info
-Server String: /run/user/1000/pulse/native
-Library Protocol Version: 34
-Server Protocol Version: 34
-Is Local: yes
-Client Index: 1232
-Tile Size: 65496
-User Name: ashley-x-xu
-Host Name: raspberrypi
-Server Name: pulseaudio
-Server Version: 14.2
-Default Sample Specification: s16le 2ch 44100Hz
-Default Channel Map: front-left,front-right
-Default Sink: bluez_sink.41_42_60_42_56_49.a2dp_sink
-Default Source: usbmic
-Cookie: 2e66:9b80
+  GNU nano 5.4                                 .asoundrc                                           
+pcm.!default {
+        type plug
+        slave.pcm "asym_device"
+}
+
+pcm.asym_device {
+        type asym
+        playback.pcm "bltspk_plug"
+        capture.pcm "usbmic_plug"
+}
+
+pcm.usbmic_plug {
+        type plug
+        slave.pcm "usbmic"
+}
+
+pcm.usbspk_plug {
+        type plug
+        slave.pcm "usbspk"
+}
+
+pcm.bltspk_plug {
+        type plug
+        slave.pcm "bltspk"
+}
+
+pcm.usbmic {
+        type hw
+        card 3
+        device 0
+}
+
+pcm.usbspk {
+        type hw
+        card 4
+        device 0
+}
+
+pcm.bltspk {
+        type bluealsa
+        device "41:42:60:42:56:49"
+        profile "a2dp"
+}
+
+ctl.!default {
+        type hw
+        card 0
+}
+
