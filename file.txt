@@ -1,9 +1,15 @@
-speaker-test -D bltspk
-
-speaker-test 1.2.4
-
-Playback device is bltspk
-Stream parameters are 48000Hz, S16_LE, 1 channels
-Using 16 octaves of pink noise
-ALSA lib dlmisc.c:339:(snd_dlobj_cache_get0) Cannot open shared library libasound_module_pcm_bluealsa.so (/lib/arm-linux-gnueabihf/alsa-lib/libasound_module_pcm_bluealsa.so: cannot open shared object file: No such file or directory)
-Playback open error: -6,No such device or address
+ashley-x-xu@raspberrypi:~/Desktop/rtsonar/jt-rtsonar/ScannerMovement $ cat /etc/os-release
+PRETTY_NAME="Raspbian GNU/Linux 11 (bullseye)"
+NAME="Raspbian GNU/Linux"
+VERSION_ID="11"
+VERSION="11 (bullseye)"
+VERSION_CODENAME=bullseye
+ID=raspbian
+ID_LIKE=debian
+HOME_URL="http://www.raspbian.org/"
+SUPPORT_URL="http://www.raspbian.org/RaspbianForums"
+BUG_REPORT_URL="http://www.raspbian.org/RaspbianBugs"
+ashley-x-xu@raspberrypi:~/Desktop/rtsonar/jt-rtsonar/ScannerMovement $ dpkg -l | grep bluealsa
+ashley-x-xu@raspberrypi:~/Desktop/rtsonar/jt-rtsonar/ScannerMovement $ find /usr -name "libasound_module_pcm_bluealsa.so"
+ashley-x-xu@raspberrypi:~/Desktop/rtsonar/jt-rtsonar/ScannerMovement $ systemctl status bluealsa
+Unit bluealsa.service could not be found.
