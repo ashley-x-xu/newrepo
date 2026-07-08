@@ -1,22 +1,14 @@
 gpx stream open -> /dev/ttyACM0
 [1] Moving to (12.0, 17.0) ...
     traveling 2.42s ...
-[1] Measurement saved: distance=290.8353498587243
-[2] Moving to (57.0, 17.0) ...
-    traveling 2.90s ...
-[2] Measurement saved: distance=295.128122550366
-[3] Moving to (102.0, 17.0) ...
-    traveling 2.90s ...
-[3] Measurement saved: distance=284.75392187889855
-[4] Moving to (147.0, 17.0) ...
 gpx stream closed.
 Traceback (most recent call last):
   File "/home/ashley-x-xu/Desktop/rtsonar/jt-rtsonar/ScannerMovement/2D_startercode.py", line 245, in <module>
     main()
-  File "/home/ashley-x-xu/Desktop/rtsonar/jt-rtsonar/ScannerMovement/2D_startercode.py", line 226, in main
-    current_position = move_to(stream, current_position, target)
-  File "/home/ashley-x-xu/Desktop/rtsonar/jt-rtsonar/ScannerMovement/2D_startercode.py", line 141, in move_to
-    stream.send([
-  File "/home/ashley-x-xu/Desktop/rtsonar/jt-rtsonar/ScannerMovement/2D_startercode.py", line 106, in send
-    self.proc.stdin.write(line + "\n")
-BrokenPipeError: [Errno 32] Broken pipe
+  File "/home/ashley-x-xu/Desktop/rtsonar/jt-rtsonar/ScannerMovement/2D_startercode.py", line 228, in main
+    distance = get_misc_measurements()
+  File "/home/ashley-x-xu/Desktop/rtsonar/jt-rtsonar/ScannerMovement/2D_startercode.py", line 163, in get_misc_measurements
+    dist = measure_distance_cm()
+  File "/home/ashley-x-xu/Desktop/rtsonar/jt-rtsonar/ScannerMovement/sonar1.py", line 204, in measure_distance_cm
+    in_ch = min(1, int(devices[in_dev].get("max_input_channels", 1)))
+TypeError: tuple indices must be integers or slices, not str
