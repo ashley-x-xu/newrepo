@@ -1,15 +1,16 @@
-ashley-x-xu@raspberrypi:~/Desktop/rtsonar/jt-rtsonar/ScannerMovement $ cat /etc/os-release
-PRETTY_NAME="Raspbian GNU/Linux 11 (bullseye)"
-NAME="Raspbian GNU/Linux"
-VERSION_ID="11"
-VERSION="11 (bullseye)"
-VERSION_CODENAME=bullseye
-ID=raspbian
-ID_LIKE=debian
-HOME_URL="http://www.raspbian.org/"
-SUPPORT_URL="http://www.raspbian.org/RaspbianForums"
-BUG_REPORT_URL="http://www.raspbian.org/RaspbianBugs"
-ashley-x-xu@raspberrypi:~/Desktop/rtsonar/jt-rtsonar/ScannerMovement $ dpkg -l | grep bluealsa
-ashley-x-xu@raspberrypi:~/Desktop/rtsonar/jt-rtsonar/ScannerMovement $ find /usr -name "libasound_module_pcm_bluealsa.so"
-ashley-x-xu@raspberrypi:~/Desktop/rtsonar/jt-rtsonar/ScannerMovement $ systemctl status bluealsa
-Unit bluealsa.service could not be found.
+pactl info
+Server String: /run/user/1000/pulse/native
+Library Protocol Version: 34
+Server Protocol Version: 34
+Is Local: yes
+Client Index: 1232
+Tile Size: 65496
+User Name: ashley-x-xu
+Host Name: raspberrypi
+Server Name: pulseaudio
+Server Version: 14.2
+Default Sample Specification: s16le 2ch 44100Hz
+Default Channel Map: front-left,front-right
+Default Sink: bluez_sink.41_42_60_42_56_49.a2dp_sink
+Default Source: usbmic
+Cookie: 2e66:9b80
