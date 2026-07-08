@@ -1,57 +1,22 @@
-pcm.!default {
-        type plug
-        slave.pcm "asym_device"
-}
-
-pcm.asym_device {
-        type asym
-        playback.pcm "bltspk_plug"
-        capture.pcm "usbmic_plug"
-}
-
-pcm.headphones_plug {
-        type plug
-        slave.pcm "headphones"
-}
-
-pcm.usbmic_plug {
-        type plug
-        slave.pcm "usbmic"
-}
-
-pcm.usbspk_plug {
-        type plug
-        slave.pcm "usbspk"
-}
-
-pcm.bltspk_plug {
-        type plug
-        slave.pcm "bltspk"
-}
-
-pcm.headphones {
-        type bluealsa
-        device "8D:D8:86:71:B6:06"
-        profile "a2dp"
-}
-
-pcm.usbmic {
-        type hw
-        card 3
-        device 0
-}
-
-pcm.usbspk {
-        type hw
-        card 4
-        device 0
-}
-
-pcm.btlspk {
-        type bluealsa
-        device "41:42:60:42:56:49"
-        profile "a2dp"
-}
-
-ctl.!default {
-        type hw
+gpx stream open -> /dev/ttyACM0
+[1] Moving to (12.0, 17.0) ...
+    traveling 2.42s ...
+[1] Measurement saved: distance=290.8353498587243
+[2] Moving to (57.0, 17.0) ...
+    traveling 2.90s ...
+[2] Measurement saved: distance=295.128122550366
+[3] Moving to (102.0, 17.0) ...
+    traveling 2.90s ...
+[3] Measurement saved: distance=284.75392187889855
+[4] Moving to (147.0, 17.0) ...
+gpx stream closed.
+Traceback (most recent call last):
+  File "/home/ashley-x-xu/Desktop/rtsonar/jt-rtsonar/ScannerMovement/2D_startercode.py", line 245, in <module>
+    main()
+  File "/home/ashley-x-xu/Desktop/rtsonar/jt-rtsonar/ScannerMovement/2D_startercode.py", line 226, in main
+    current_position = move_to(stream, current_position, target)
+  File "/home/ashley-x-xu/Desktop/rtsonar/jt-rtsonar/ScannerMovement/2D_startercode.py", line 141, in move_to
+    stream.send([
+  File "/home/ashley-x-xu/Desktop/rtsonar/jt-rtsonar/ScannerMovement/2D_startercode.py", line 106, in send
+    self.proc.stdin.write(line + "\n")
+BrokenPipeError: [Errno 32] Broken pipe
